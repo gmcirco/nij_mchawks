@@ -15,21 +15,29 @@ This folder contains the processed data used to fit the models. The file `train_
 For forecasting in rounds 2 and 3, individuals who recidivated were removed, based on their absence in one of the three test datasets.
 `train_data_matrix2.csv` is specifically pre-processed for use in the R replication script which will generate the results shown in the
 NIJ contest paper. `full_data_matrix.csv` is the final, full dataset that NIJ released following the end of the competition. This can be used
-to compare predictions against the true values.
+to compare predictions against the true values. There are also a number of other scripts that were used to fit intermediate models in both R
+and Python. These are included to help illustrate our analysis process. If you are interested in the results for our winning model, the 
+`xgboost_final_eval.R` file contains a more consise collection of scripts to produce the analysis and figures.
+
+## Round 1-3 Replication Code
 
 To replicate the round 1 results you will need the following files:
   - `03_predictround1.py`
   - `andy_helpers.py`
+  - `fairness_funcs.py`
+  - `pytorch_mods.py`
   - `train_data_matrix.csv`
   - `test_data_matrix.csv`
   
-To replicate the round 2 results you will need the following files:
+To replicate the round 2 results and NIJ paper results you will need the following files:
   - `xgboost_final_eval.R`
   - `full_data_matrix.csv`
   - `train_data_matrix2.csv`
 
-To replicate the round 1 results you will need the following files:
+To replicate the round 3 results you will need the following files:
   - `04_predictround3.py`
   - `andy_helpers.py`
-   - `train_data_matrix2.csv`
+  - `fairness_funcs.py`
+  - `pytorch_mods.py`
+  - `train_data_matrix2.csv`
   - `test_data_matrix3.csv`
